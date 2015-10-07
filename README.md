@@ -41,3 +41,17 @@ Testing spritesmith:
 ``` bash
 gulp sprite
 ```
+
+#### *Only Windows users
+
+Only for Windows users who want to delete/remove the bigger ```node_modules``` folder can do this with only two commands.
+
+To install, try this:
+```bash
+npm install rimraf -g
+```
+
+In the root where is ```node_modules```, try:
+```bash
+rimraf node_modules
+```
