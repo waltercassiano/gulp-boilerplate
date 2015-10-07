@@ -18,6 +18,9 @@ A simple way to start your project using Gulp.
 * [gulp-sourcemaps](https://github.com/floridoo/gulp-sourcemaps)
 * [gulp-watch](https://github.com/floatdrop/gulp-watch)
 * [gulp.spritesmith](https://github.com/twolfson/gulp.spritesmith)
+* [gulp.concat](https://github.com/contra/gulp-concat)
+* [gulp.rename](https://github.com/hparra/gulp-rename)
+* [gulp.uglify](https://github.com/terinjokes/gulp-uglify)
 
 
 ## Quick Start
