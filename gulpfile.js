@@ -1,18 +1,12 @@
 'use strict';
 
 var gulp = require('gulp');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
-var livereload = require('gulp-livereload');
-var gulpCssGlobbing = require("gulp-css-globbing");
-var imagemin = require('gulp-imagemin');
-var spritesmith = require('gulp.spritesmith');
+var plugins = require('gulp-load-plugins')();
 
 gulp.task('sass:prod', function () {
   gulp.src('./sass/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer({
+    .pipe(plugins.sass().on('error', plugins.sass.logError))
+    .pipe(plugins.autoprefixer({
        browsers: ['last 2 version']
     }))
     .pipe(gulp.dest('./css'));
@@ -20,23 +14,23 @@ gulp.task('sass:prod', function () {
 
 gulp.task('sass:dev', function () {
   gulp.src('./sass/*.scss')
-    .pipe(gulpCssGlobbing({
+    .pipe(plugins.cssGlobbing({
       extensions: ['.scss']
     }))
-    .pipe(sourcemaps.init())
-    .pipe(sass({includePaths: [
+    .pipe(plugins.sourcemaps.init())
+    .pipe(plugins.sass({includePaths: [
       'node_modules/breakpoint-sass/stylesheets/'
-     ] }).on('error', sass.logError))
-    .pipe(autoprefixer({
+     ] }).on('error', plugins.sass.logError))
+    .pipe(plugins.autoprefixer({
       browsers: ['last 2 version']
     }))
-    .pipe(sourcemaps.write('.'))
+    .pipe(plugins.sourcemaps.write('.'))
     .pipe(gulp.dest('./css'));
 });
 
 gulp.task('sprite', function () {
  // Generate our spritesheet
- var spriteData = gulp.src('images/**/*.png').pipe(spritesmith({
+ var spriteData = gulp.src('images/**/*.png').pipe(plugins.spritesmith({
    imgName: '../generated/sprite.png',
    retinaSrcFilter: 'images/**/*-2x.png',
    retinaImgName: '../generated/sprite-2x.png',
@@ -45,7 +39,7 @@ gulp.task('sprite', function () {
 
  // Pipe image stream through image optimizer and onto disk
  spriteData.img
-   .pipe(imagemin())
+   .pipe(plugins.imagemin())
    .pipe(gulp.dest('./generated/'));
 
  // Pipe CSS stream through CSS optimizer and onto disk
@@ -58,10 +52,10 @@ gulp.task('sass:watch', function () {
   gulp.watch('./sass/**/*.scss', ['sass:dev']);
 
   // Create LiveReload server
-  livereload.listen();
+  plugins.livereload.listen();
 
   // Watch any files in dist/, reload on change
-  gulp.watch(['./css/**/*']).on('change', livereload.changed);
+  gulp.watch(['./css/**/*']).on('change', plugins.livereload.changed);
 });
 
 gulp.task('default', ['sass:dev', 'sass:watch', 'sprite']);
