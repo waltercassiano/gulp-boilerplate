@@ -10,5 +10,7 @@ function getTask(task) {
 gulp.task('sass:production', getTask('sass-production'));
 gulp.task('sass:dev', getTask('sass-dev'));
 gulp.task('sass:watch', getTask('sass-watch'));
+gulp.task('js:compress', getTask('js-compress'));
+gulp.task('js:watch', getTask('js-watch'));
 gulp.task('sprite', getTask('sprite'));
-gulp.task('default', ['sass:dev', 'sass:watch', 'sprite']);
+gulp.task('default', ['sass:dev', 'sass:watch', 'js:compress', 'js:watch', 'sprite']);
