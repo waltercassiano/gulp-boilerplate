@@ -13,6 +13,7 @@ A simple way to start your project using Gulp.
 * [gulp-css-globbing](https://github.com/jsahlen/gulp-css-globbing)
 * [gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin)
 * [gulp-livereload](https://github.com/vohof/gulp-livereload)
+* [gulp-load-plugins](https://github.com/jackfranklin/gulp-load-plugins)
 * [gulp-sass](https://github.com/dlmanning/gulp-sass)
 * [gulp-sourcemaps](https://github.com/floridoo/gulp-sourcemaps)
 * [gulp-watch](https://github.com/floatdrop/gulp-watch)
