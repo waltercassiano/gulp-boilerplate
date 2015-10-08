@@ -46,7 +46,7 @@ Run `server` task, to start browser-sync and watch for `sass:dev` and `js:compre
 gulp server
 ```
 
-#### *Only Windows users
+## Only Windows users
 
 Only for Windows users who want to delete/remove the bigger ```node_modules``` folder can do this with only two commands.
 
@@ -59,3 +59,7 @@ In the root where is ```node_modules```, try:
 ```bash
 rimraf node_modules
 ```
+
+## License
+
+The code is available under the [MIT License](LICENSE.md).
