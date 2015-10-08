@@ -9,6 +9,7 @@ A simple way to start your project using Gulp.
 ## Modules list
 * [gulp](https://github.com/gulpjs/gulp)
 * [breakpoint-sass](https://github.com/Team-Sass/breakpoint)
+* [browser-sync](http://www.browsersync.io/docs/gulp/)
 * [gulp-autoprefixer](https://github.com/sindresorhus/gulp-autoprefixer)
 * [gulp-css-globbing](https://github.com/jsahlen/gulp-css-globbing)
 * [gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin)
@@ -40,9 +41,9 @@ gulp
 
 ### Example
 
-Testing spritesmith:
+Run `server` task, to start browser-sync and watch for `sass:dev` and `js:compress`:
 ``` bash
-gulp sprite
+gulp server
 ```
 
 #### *Only Windows users
