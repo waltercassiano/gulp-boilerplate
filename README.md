@@ -1,8 +1,11 @@
 # Gulp Boilerplate
-A simple way to start your project using Gulp.
+> A simple way to start your project using Gulp.
+
+## Contributing :wrench:
+We have some advice if you want to contribute with us. If you are in doubt about GitHub flow, we also include some tips there. [Check it](https://github.com/ciandt-dev/gulp-boilerplate/blob/master/CONTRIBUTING.md) and contribute.
+
 
 ## Requires
-
 * [Node.JS](http://nodejs.org/)
 * [Gulp](http://gulpjs.com)
 
