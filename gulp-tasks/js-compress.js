@@ -2,13 +2,13 @@
 
 module.exports = function (gulp, $) {
   return function() {
-    gulp.src('./js/*.js')
+    gulp.src('./test_files/src/js/*.js')
     .pipe($.concat('main.js'))
     .pipe($.rename({
         suffix: '.min'
     }))
     .pipe($.uglify())
     .pipe($.sourcemaps.write())
-    .pipe(gulp.dest('./js/min'));
+    .pipe(gulp.dest('./dist/js'));
   };
 };

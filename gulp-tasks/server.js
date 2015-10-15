@@ -7,8 +7,8 @@ module.exports = function (gulp, plugins) {
         proxy: "paths.url"
     });
 
-    gulp.watch('./sass/*.scss', ['sass:dev']);
-    gulp.watch('./js/*.js', ['js:compress']);
-    gulp.watch(['./css', './js']).on('change', browserSync.reload);
+    gulp.watch('./dist/sass/*.scss', ['sass:dev']);
+    gulp.watch('./dist/js/*.js', ['js:compress']);
+    gulp.watch(['./dist/css', './js']).on('change', browserSync.reload);
   };
 };

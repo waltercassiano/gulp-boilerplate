@@ -12,7 +12,6 @@ module.exports = function (gulp, $) {
 
     // Pipe image stream through image optimizer and onto disk
     spriteData.img
-     .pipe($.imagemin())
      .pipe(gulp.dest('./generated/'));
 
     // Pipe CSS stream through CSS optimizer and onto disk

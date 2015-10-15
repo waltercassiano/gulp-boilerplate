@@ -2,7 +2,7 @@
 
 module.exports = function (gulp, $) {
   return function() {
-    gulp.src('./sass/*.scss')
+    gulp.src('./test_files/src/sass/*.scss')
     .pipe($.cssGlobbing({
       extensions: ['.scss']
     }))
@@ -16,6 +16,6 @@ module.exports = function (gulp, $) {
       browsers: ['last 2 version']
     }))
     .pipe($.sourcemaps.write('.'))
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('./dist/css'));
   };
 };
