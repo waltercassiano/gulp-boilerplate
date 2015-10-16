@@ -1,5 +1,10 @@
 * {
-  font-family: "Verdana", Geneva, sans-serif; }
+  font-family: "Verdana", Geneva, sans-serif!important; 
+}
+
+#dani {
+  margin: 0;
+}
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address,
 big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
@@ -106,7 +111,7 @@ a {
 
 @media (max-width: 481px) {
   .img-logo {
-    background-image: url("../images/mobile/logo.png");
+    background-image: url('../images/mobile/logo.png');
     width: 208px;
     height: 90px; }
   .logo span {
@@ -114,7 +119,7 @@ a {
 
 @media (min-width: 482px) and (max-width: 800px) {
   .img-logo {
-    background-image: url("../images/tablet/logo.png");
+    background-image: url(../images/tablet/logo.png);
     width: 199px;
     height: 80px; } }
 
@@ -135,7 +140,7 @@ nav {
   left: 0;
   top: 25px; }
 
-@media (max-width: 481px) {
+@media (max-width: 481px){
   .nav-icon {
     background-image: url("../images/mobile/menu-icon.png");
     width: 47px;
@@ -147,7 +152,7 @@ nav {
     width: 50px;
     height: 42px; } }
 
-@media (min-width: 801px) {
+@media (min-width: 801px){
   .nav-icon {
     background-image: url("../images/desktop/menu-icon.png");
     width: 49px;

@@ -13,7 +13,7 @@ gulp.task('sass:watch', getTask('sass-watch'));
 gulp.task('js:compress', getTask('js-compress'));
 gulp.task('js:watch', getTask('js-watch'));
 gulp.task('sprite', getTask('sprite'));
-gulp.task('csslint', getTask('csslint'));
 gulp.task('server', getTask('server'));
 gulp.task('stylelint', getTask('stylelint'));
 gulp.task('default', ['sass:dev', 'sass:watch', 'js:compress', 'js:watch', 'sprite']);
+gulp.task('csslint', getTask('csslint'));
