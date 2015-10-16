@@ -35,6 +35,8 @@
     "gulp-watch": "^4.3.3",
     "gulp.spritesmith": "^4.0.0",
     "postcss-reporter": "^1.2.1",
-    "stylelint": "^1.2.1"
+    "stylelint": "^1.2.1",
+    "imagemin-mozjpeg": "^5.1.0",
+    "imagemin-pngquant": "^4.2.0"
   }
 }

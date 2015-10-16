@@ -14,6 +14,12 @@ We accept pull requests from everyone. Contribute with us :)
 
 Simple as that!
 
+## Updating your fork
+
+1. [Configuring a remote for a fork](https://help.github.com/articles/configuring-a-remote-for-a-fork/)
+
+2. [Syncing a fork](https://help.github.com/articles/syncing-a-fork/)
+
 ## But we have some patterns, to keep things organized.
 
 * Always refer your commit to an issue(don't have? Please, [crete one](https://github.com/ciandt-dev/gulp-boilerplate/issues/new!). Eg.: "Issue #30: creating contributing guide"
@@ -36,4 +42,3 @@ Edit Pull Request and Issue description, and add checkboxes with completed and u
 Don't let these rules scare you. Make your changes and call us, **we'll help you!**
 
 :punch:
-

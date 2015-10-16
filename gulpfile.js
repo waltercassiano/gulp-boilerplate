@@ -4,7 +4,7 @@ var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 
 function getTask(task) {
-    return require('./gulp-tasks/' + task)(gulp, plugins);
+  return require('./gulp-tasks/' + task)(gulp, plugins);
 }
 
 gulp.task('sass:production', getTask('sass-production'));
@@ -15,5 +15,15 @@ gulp.task('js:watch', getTask('js-watch'));
 gulp.task('sprite', getTask('sprite'));
 gulp.task('server', getTask('server'));
 gulp.task('stylelint', getTask('stylelint'));
-gulp.task('default', ['sass:dev', 'sass:watch', 'js:compress', 'js:watch', 'sprite']);
 gulp.task('csslint', getTask('csslint'));
+gulp.task('imagemin', getTask('imagemin'));
+gulp.task('imagemin-watch', getTask('imagemin-watch'));
+gulp.task('default', [// Compile
+                      'sass:dev', 'sprite',
+
+                      // Optimization
+                      'js:compress', 'imagemin',
+
+                      // Watch
+                      'sass:watch', 'js:watch', 'imagemin-watch'
+                      ]);
