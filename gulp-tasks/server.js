@@ -3,7 +3,7 @@
 var browserSync = require('browser-sync').create();
 module.exports = function (gulp, plugins) {
 
-return function() {
+	return function() {
     browserSync.init({
         proxy: "paths.url"
     });
@@ -13,4 +13,3 @@ return function() {
     gulp.watch(['./dist/css', './js']).on('change', browserSync.reload);
   };
 };
-
