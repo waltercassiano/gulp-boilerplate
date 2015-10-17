@@ -2,7 +2,8 @@
 
 var browserSync = require('browser-sync').create();
 module.exports = function (gulp, plugins) {
-  return function() {
+
+	return function() {
     browserSync.init({
         proxy: "paths.url"
     });
