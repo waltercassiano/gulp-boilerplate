@@ -15,14 +15,22 @@ module.exports = function (gulp, plugins) {
    .pipe(postcss([
   	  stylelint({ // an example config that has four rules 
   	    "rules": {
-  	      "color-no-invalid-hex": 0,
+  	      "color-no-invalid-hex": 2,
+          "color-hex-case": [2, "lower"],
+          "color-hex-length": [2, "short"],
+          "block-no-empty": 2,
   	      "declaration-colon-space-before": [2, "never"],
-  	      "indentation": [1, "tab"],
+          "declaration-no-important": 2,
+  	      "indentation": [2, 2],
           "function-space-after": [2, "always"],
+          "function-url-quotes": [2, "double"],
+          "no-missing-eof-newline": 2,
+          "rule-no-duplicate-properties": 2,
+          "rule-properties-order": [2, "alphabetical"],
           "selector-no-id": 2,
-          "function-comma-space-before": [2, "never"],
-          "function-url-quotes": [1, "double"],
-  	      "number-leading-zero": [2, "never"]
+          "selector-no-universal": 1,
+          "selector-pseudo-element-colon-notation": [2, "single"],
+          "string-quotes": [2, "double"]
   	    }
   	  }),
   	  reporter({
