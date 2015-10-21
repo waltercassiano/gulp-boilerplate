@@ -1,7 +1,7 @@
 'use strict';
 
 var browserSync = require('browser-sync').create();
-module.exports = function (gulp, plugins) {
+module.exports = function (gulp, $) {
 
 	return function() {
         browserSync.init({

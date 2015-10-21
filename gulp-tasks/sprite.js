@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function (gulp, plugins, config) {
+module.exports = function (gulp, $, config) {
   return function() {
     // Generate our spritesheet
     // The plan is to use the same folder for both types of images
@@ -14,7 +14,7 @@ module.exports = function (gulp, plugins, config) {
 
     // Pipe image stream through image optimizer and onto disk
     spriteData.img
-        .pipe(plugins.imagemin())
+        .pipe($.imagemin())
         .pipe(gulp.dest(config.paths.images.dest));
 
     // Pipe CSS stream through CSS optimizer and onto disk
