@@ -27,6 +27,7 @@ We have some advice if you want to contribute with us. If you are in doubt about
 * [gulp.concat](https://github.com/contra/gulp-concat)
 * [gulp.rename](https://github.com/hparra/gulp-rename)
 * [gulp.uglify](https://github.com/terinjokes/gulp-uglify)
+* [gulp-util](https://github.com/gulpjs/gulp-util)
 
 
 ## Quick Start
