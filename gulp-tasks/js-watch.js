@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function (gulp, $, config) {
   return function() {
     gulp.watch(config.paths.scripts.src + '*.js', ['js:compress']);
