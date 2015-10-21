@@ -2,9 +2,12 @@
 
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
+var config = require('./config/gulp-config.js');
+
+plugins.util.log('### GULP BOILERPLATE ###');
 
 function getTask(task) {
-  return require('./gulp-tasks/' + task)(gulp, plugins);
+    return require('./gulp-tasks/' + task)(gulp, $, config);
 }
 
 gulp.task('sass:production', getTask('sass-production'));

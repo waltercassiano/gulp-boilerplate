@@ -1,13 +1,13 @@
 'use strict';
 
-module.exports = function (gulp, $) {
+module.exports = function (gulp, $, config) {
   return function() {
-    gulp.watch('./test_files/src/js/*.js', ['js:compress']);
+    gulp.watch(config.paths.scripts.src + '*.js', ['js:compress']);
 
     // Create LiveReload server
     $.livereload.listen();
 
     // Watch any files in dist/, reload on change
-    gulp.watch(['./dist/js/**']).on('change', $.livereload.changed);
+    gulp.watch([config.paths.scripts.src + '**']).on('change', $.livereload.changed);
   };
 };

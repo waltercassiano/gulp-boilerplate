@@ -1,14 +1,14 @@
 'use strict';
 
-module.exports = function (gulp, $) {
+module.exports = function (gulp, $, config) {
   return function() {
-    gulp.src('./test_files/src/js/*.js')
+    gulp.src(config.paths.scripts.src + '*.js')
     .pipe($.concat('main.js'))
     .pipe($.rename({
         suffix: '.min'
     }))
     .pipe($.uglify())
     .pipe($.sourcemaps.write())
-    .pipe(gulp.dest('./dist/js'));
+    .pipe(gulp.dest(config.paths.scripts.dest));
   };
 };

@@ -1,21 +1,21 @@
 'use strict';
 
-module.exports = function (gulp, $) {
+module.exports = function (gulp, $, config) {
   return function() {
-    gulp.src('./test_files/src/sass/*.scss')
+    gulp.src(config.paths.styles.src + '*.scss')
     .pipe($.cssGlobbing({
       extensions: ['.scss']
     }))
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       includePaths: [
-        'node_modules/breakpoint-sass/stylesheets/'
+        config.basePaths.node_modules + 'breakpoint-sass/stylesheets/'
       ]
     }).on('error', $.sass.logError))
     .pipe( $.autoprefixer({
       browsers: ['last 2 version']
     }))
     .pipe($.sourcemaps.write('.'))
-    .pipe(gulp.dest('./dist/css'));
+    .pipe(gulp.dest(config.paths.styles.dest));
   };
 };

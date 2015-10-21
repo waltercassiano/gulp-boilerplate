@@ -1,13 +1,13 @@
 'use strict';
 
-module.exports = function (gulp, $) {
+module.exports = function (gulp, $, config) {
   return function() {
-    gulp.watch('./test_files/src/sass/*.scss', ['sass:dev']);
+    gulp.watch(config.paths.styles.src + '*.scss', ['sass:dev']);
 
     // Create LiveReload server
     $.livereload.listen();
 
     // Watch any files in dist/, reload on change
-    gulp.watch(['./dist/css/**']).on('change', $.livereload.changed);
+    gulp.watch([config.paths.styles.dest + '**']).on('change', $.livereload.changed);
   };
 };

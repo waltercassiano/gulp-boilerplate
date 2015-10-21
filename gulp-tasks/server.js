@@ -1,15 +1,15 @@
 'use strict';
 
 var browserSync = require('browser-sync').create();
-module.exports = function (gulp, plugins) {
+module.exports = function (gulp, $) {
 
 	return function() {
-    browserSync.init({
-        proxy: "paths.url"
-    });
+        browserSync.init({
+            proxy: "paths.url"
+        });
 
-    gulp.watch('./dist/sass/*.scss', ['sass:dev']);
-    gulp.watch('./dist/js/*.js', ['js:compress']);
-    gulp.watch(['./dist/css', './js']).on('change', browserSync.reload);
-  };
+        gulp.watch(config.paths.styles.src + '*.scss', ['sass:dev']);
+        gulp.watch(config.paths.scripts.src + '*.js', ['js:compress']);
+        gulp.watch([config.paths.styles.dest, config.paths.scripts.src]).on('change', browserSync.reload);
+    };
 };

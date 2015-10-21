@@ -9,7 +9,7 @@ var stylelint = require("stylelint");
 //1 - turn the rule on as a warning (doesn't affect exit code)
 //2 - turn the rule on as an error (exit code will be 1)
 
-module.exports = function (gulp, plugins) {
+module.exports = function (gulp, $) {
   return function() {
 	 gulp.src("./test_files/dist/css/*.css")
    .pipe(postcss([
