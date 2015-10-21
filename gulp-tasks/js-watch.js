@@ -7,6 +7,6 @@ module.exports = function (gulp, plugins, config) {
     plugins.livereload.listen();
 
     // Watch any files in dist/, reload on change
-    gulp.watch([config.paths.scripts.src + '/**']).on('change', plugins.livereload.changed);
+    gulp.watch([config.paths.scripts.src + '**']).on('change', plugins.livereload.changed);
   }
 }

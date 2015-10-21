@@ -2,7 +2,6 @@
 
 module.exports = function (gulp, plugins, config) {
   return function() {
-    //plugins.gutil.log('Hello world!');
     gulp.src(config.paths.styles.src + '*.scss')
     .pipe(plugins.cssGlobbing({
       extensions: ['.scss']
@@ -17,6 +16,6 @@ module.exports = function (gulp, plugins, config) {
       browsers: ['last 2 version']
     }))
     .pipe(plugins.sourcemaps.write('.'))
-    .pipe(gulp.dest(config.paths.styles.css));
+    .pipe(gulp.dest(config.paths.styles.dest));
   };
 };

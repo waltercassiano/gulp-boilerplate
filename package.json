@@ -1,6 +1,17 @@
 {
-  "name": "Project",
+  "name": "Gulp_Boilerplate",
   "version": "1.0.0",
+  "author": "CI&T Front-end",
+  "description": "A simple way method to start your project using Gulp.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ciandt-dev/gulp-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ciandt-dev/gulp-boilerplate/issues"
+  },
+  "homepage": "https://github.com/ciandt-dev/gulp-boilerplate",
+  "license": "MIT",
   "scripts": {
     "sass:dev": "./node_modules/.bin/gulp",
     "sass:prod": "./node_modules/.bin/gulp sass:prod"
@@ -8,6 +19,7 @@
   "dependencies": {},
   "devDependencies": {
     "breakpoint-sass": "^2.6.1",
+    "browser-sync": "^2.9.10",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-concat": "^2.6.0",

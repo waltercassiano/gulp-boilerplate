@@ -6,6 +6,6 @@ module.exports = function (gulp, plugins, config) {
     .pipe(plugins.autoprefixer({
        browsers: ['last 2 version']
     }))
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest(config.paths.styles.dest));
   };
 };
