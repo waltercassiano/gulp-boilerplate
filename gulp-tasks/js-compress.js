@@ -1,15 +1,14 @@
 'use strict';
 
-module.exports = function (gulp, plugins, config) {
-
+module.exports = function (gulp, $, config) {
   return function() {
-        gulp.src(config.paths.scripts.src + '*.js')
-        .pipe(plugins.concat('main.js'))
-        .pipe(plugins.rename({
-            suffix: '.min'
-        }))
-        .pipe(plugins.uglify())
-        .pipe(plugins.sourcemaps.write())
-        .pipe(gulp.dest(config.paths.scripts.dest));
-    };
+    gulp.src(config.paths.scripts.src + '*.js')
+    .pipe($.concat('main.js'))
+    .pipe($.rename({
+        suffix: '.min'
+    }))
+    .pipe($.uglify())
+    .pipe($.sourcemaps.write())
+    .pipe(gulp.dest(config.paths.scripts.dest));
+  };
 };
