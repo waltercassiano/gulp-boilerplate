@@ -1,6 +1,5 @@
 'use strict';
 
-
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 var config = require('./config/gulp-config.js');
@@ -8,11 +7,7 @@ var config = require('./config/gulp-config.js');
 plugins.util.log('### GULP BOILERPLATE ###');
 
 function getTask(task) {
-<<<<<<< HEAD
-    return require('./gulp-tasks/' + task)(gulp, plugins, config);
-=======
-  return require('./gulp-tasks/' + task)(gulp, plugins);
->>>>>>> refs/remotes/origin/master
+    return require('./gulp-tasks/' + task)(gulp, $, config);
 }
 
 gulp.task('sass:production', getTask('sass-production'));
