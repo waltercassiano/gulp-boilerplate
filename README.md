@@ -4,7 +4,7 @@
 ## Contributing :wrench:
 We have some advice if you want to contribute with us. If you are in doubt about GitHub flow, we also include some tips there. [Check it](https://github.com/ciandt-dev/gulp-boilerplate/blob/master/CONTRIBUTING.md) and contribute.
 
-## Stay up-dto-date :bulb:
+## Stay up-to-date :bulb:
 [Check GitHub documentation.](https://github.com/ciandt-dev/gulp-boilerplate/blob/master/CONTRIBUTING.md#updating-your-fork)
 
 ## Requires
