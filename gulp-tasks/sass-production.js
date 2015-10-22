@@ -1,9 +1,9 @@
 'use strict';
 
-module.exports = function (gulp, plugins, config) {
+module.exports = function (gulp, $, config) {
   return function() { gulp.src(config.paths.styles.src + '*.scss')
-    .pipe(plugins.sass().on('error', plugins.sass.logError))
-    .pipe(plugins.autoprefixer({
+    .pipe($.sass().on('error', $.sass.logError))
+    .pipe($.autoprefixer({
        browsers: ['last 2 version']
     }))
     .pipe(gulp.dest(config.paths.styles.dest));
