@@ -1,4 +1,4 @@
-# Gulp Boilerplate
+# Gulp Boilerplate ![Version](https://img.shields.io/badge/Version-1.0.4-green.svg)
 > A simple way to start your project using Gulp.
 
 ## Contributing :wrench:
