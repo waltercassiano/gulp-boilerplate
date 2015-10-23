@@ -6,15 +6,7 @@ module.exports = function (gulp, $, config) {
         gulp.src(config.paths.scripts.src + '*.js')
 
         // Eslint
-        .pipe($.eslint({
-            "rules": {
-                "no-redeclare": 1
-            },
-            "globals": {
-                "jQuery": true,
-                "$": false
-            }
-        }))
+        .pipe($.eslint())
         .pipe($.eslint.format())
         .pipe($.eslint.failAfterError())
     
