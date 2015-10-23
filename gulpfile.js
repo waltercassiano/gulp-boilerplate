@@ -2,9 +2,12 @@
 
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
+var config = require('./config/gulp-config.js');
+
+plugins.util.log('### GULP BOILERPLATE ###');
 
 function getTask(task) {
-    return require('./gulp-tasks/' + task)(gulp, plugins);
+    return require('./gulp-tasks/' + task)(gulp, $, config);
 }
 
 gulp.task('sass:production', getTask('sass-production'));
@@ -15,4 +18,15 @@ gulp.task('js:watch', getTask('js-watch'));
 gulp.task('js:eslint', getTask('js-eslint'));
 gulp.task('sprite', getTask('sprite'));
 gulp.task('server', getTask('server'));
-gulp.task('default', ['sass:dev', 'sass:watch', 'js:compress', 'js:watch', 'sprite']);
+gulp.task('stylelint', getTask('stylelint'));
+gulp.task('imagemin', getTask('imagemin'));
+gulp.task('imagemin-watch', getTask('imagemin-watch'));
+gulp.task('default', [// Compile
+                      'sass:dev', 'sprite',
+
+                      // Optimization
+                      'js:compress', 'imagemin',
+
+                      // Watch
+                      'sass:watch', 'js:watch', 'imagemin-watch'
+                      ]);
