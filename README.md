@@ -4,7 +4,7 @@
 ## Contributing :wrench:
 We have some advice if you want to contribute with us. If you are in doubt about GitHub flow, we also include some tips there. [Check it](https://github.com/ciandt-dev/gulp-boilerplate/blob/master/CONTRIBUTING.md) and contribute.
 
-## Stay up-dto-date :bulb:
+## Stay up-to-date :bulb:
 [Check GitHub documentation.](https://github.com/ciandt-dev/gulp-boilerplate/blob/master/CONTRIBUTING.md#updating-your-fork)
 
 ## Requires
@@ -17,6 +17,7 @@ We have some advice if you want to contribute with us. If you are in doubt about
 * [browser-sync](http://www.browsersync.io/docs/gulp/)
 * [gulp-autoprefixer](https://github.com/sindresorhus/gulp-autoprefixer)
 * [gulp-css-globbing](https://github.com/jsahlen/gulp-css-globbing)
+* [gulp-eslint](https://github.com/adametry/gulp-eslint)
 * [gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin)
 * [gulp-livereload](https://github.com/vohof/gulp-livereload)
 * [gulp-load-plugins](https://github.com/jackfranklin/gulp-load-plugins)

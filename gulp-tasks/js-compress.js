@@ -3,7 +3,7 @@
 module.exports = function (gulp, $, config) {
   return function() {
     gulp.src(config.paths.scripts.src + '*.js')
-    .pipe($.concat('main.js'))
+    .pipe($.concat(config.paths.scripts.fileName))
     .pipe($.rename({
         suffix: '.min'
     }))
