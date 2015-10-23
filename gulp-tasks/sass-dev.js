@@ -12,7 +12,7 @@ module.exports = function (gulp, $, config) {
         config.basePaths.node_modules + 'breakpoint-sass/stylesheets/'
       ]
     }).on('error', $.sass.logError))
-    .pipe( $.autoprefixer({
+    .pipe($.autoprefixer({
       browsers: ['last 2 version']
     }))
     .pipe($.sourcemaps.write('.'))

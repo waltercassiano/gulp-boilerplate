@@ -31,5 +31,4 @@ module.exports = {
     retinaImgName: 'sprite-2x.png',
     cssName: '_sprite.scss',
   }
-
 };
