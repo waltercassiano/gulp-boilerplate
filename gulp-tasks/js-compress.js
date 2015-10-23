@@ -5,7 +5,7 @@ module.exports = function (gulp, $, config) {
     gulp.src(config.paths.scripts.src + '*.js')
     .pipe($.concat(config.paths.scripts.fileName))
     .pipe($.rename({
-        suffix: '.min'
+      suffix: '.min'
     }))
     .pipe($.uglify())
     .pipe($.sourcemaps.write())

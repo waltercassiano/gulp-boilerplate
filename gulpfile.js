@@ -7,7 +7,7 @@ var config = require('./config/gulp-config.js');
 plugins.util.log('### GULP BOILERPLATE ###');
 
 function getTask(task) {
-    return require('./gulp-tasks/' + task)(gulp, plugins, config);
+  return require('./gulp-tasks/' + task)(gulp, plugins, config);
 }
 
 gulp.task('sass:production', getTask('sass-production'));

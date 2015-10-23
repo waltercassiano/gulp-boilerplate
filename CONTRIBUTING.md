@@ -6,13 +6,17 @@ We accept pull requests from everyone. Contribute with us :)
 
 2. Make sure you download your forked repo, it will be like this:
 
-    git clone git@github.com:**your-username**/gulp-boilerplate.git
+  git clone git@github.com:**your-username**/gulp-boilerplate.git
 
 3. Make your changes, and test it as much as you can (We must include a test tool, feel free to help us)
 
 4. Push to your fork and [submit a pull request](https://help.github.com/articles/using-pull-requests/).
 
 Simple as that!
+
+## Pushing code
+
+Make sure to have [editorconfig](http://editorconfig.org/) installed on your editor. It will make sure the code you push is equals to the standard and conventions we're using on the project.
 
 ## Updating your fork
 
