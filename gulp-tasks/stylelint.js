@@ -11,17 +11,17 @@ var stylelint = require("stylelint");
 
 module.exports = function (gulp, $, config) {
   return function() {
-	 gulp.src(config.paths.styles.dest + "*.css")
-   .pipe($.postcss([
-  	  stylelint({ // an example config that has four rules
-  	    "rules": {
-  	      "color-no-invalid-hex": 2,
+    gulp.src(config.paths.styles.dest + "*.css")
+    .pipe($.postcss([
+      stylelint({
+        "rules": {
+          "color-no-invalid-hex": 2,
           "color-hex-case": [2, "lower"],
           "color-hex-length": [2, "short"],
           "block-no-empty": 2,
-  	      "declaration-colon-space-before": [2, "never"],
+          "declaration-colon-space-before": [2, "never"],
           "declaration-no-important": 2,
-  	      "indentation": [2, 2],
+          "indentation": [2, 2],
           "function-space-after": [2, "always"],
           "function-url-quotes": [2, "double"],
           "no-missing-eof-newline": 2,
@@ -31,11 +31,11 @@ module.exports = function (gulp, $, config) {
           "selector-no-universal": 1,
           "selector-pseudo-element-colon-notation": [2, "single"],
           "string-quotes": [2, "double"]
-  	    }
-  	  }),
-  	  reporter({
-  	    clearMessages: true,
-  	  })
-  	]));
+        }
+      }),
+      reporter({
+        clearMessages: true,
+      })
+    ]));
   };
 };
