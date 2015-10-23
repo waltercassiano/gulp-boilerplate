@@ -1,12 +1,12 @@
 'use strict';
 
-module.exports = function (gulp, plugins) {
+module.exports = function (gulp, $, config) {
 
   return function() {
-        gulp.src('./test_files/src/js/*.js')
+        gulp.src(config.paths.scripts.src + '*.js')
 
         // Eslint
-        .pipe(plugins.eslint({
+        .pipe($.eslint({
             "rules": {
                 "no-redeclare": 1
             },
@@ -15,18 +15,20 @@ module.exports = function (gulp, plugins) {
                 "$": false
             }
         }))
-        .pipe(plugins.eslint.format())
-        .pipe(plugins.eslint.failAfterError())
+        .pipe($.eslint.format())
+        .pipe($.eslint.failAfterError())
+    
+        .pipe($.sourcemaps.init())
         
         // Concat and rename
-        .pipe(plugins.concat('main.js'))
-        .pipe(plugins.rename({
+        .pipe($.concat(config.paths.scripts.fileName))
+        .pipe($.rename({
             suffix: '.min'
         }))
 
         // uglifying and moving to destination
-        .pipe(plugins.uglify())
-        .pipe(plugins.sourcemaps.write())
-        .pipe(gulp.dest('./test_files/dist/js/'));
+        .pipe($.uglify())
+        .pipe($.sourcemaps.write('.'))
+        .pipe(gulp.dest(config.paths.scripts.dest));
     };
 };

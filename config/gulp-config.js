@@ -12,8 +12,9 @@ module.exports = {
       dest: './test_files/dist/images/'
     },
     scripts: {
+      fileName: 'main.js',
       src: './test_files/src/js/',
-      dest: '.test_files/dist/js/'
+      dest: './test_files/dist/js/'
     },
     styles: {
       src: './test_files/src/sass/',
