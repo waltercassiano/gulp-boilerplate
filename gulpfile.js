@@ -22,7 +22,7 @@ gulp.task('stylelint', getTask('stylelint'));
 gulp.task('imagemin', getTask('imagemin'));
 gulp.task('imagemin-watch', getTask('imagemin-watch'));
 gulp.task('default', [// Compile
-                      'sass:dev', 'sprite',
+                      'sass:dev', 'sprite', 'js:eslint',
 
                       // Optimization
                       'js:compress', 'imagemin',
