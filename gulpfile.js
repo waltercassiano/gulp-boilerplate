@@ -2,7 +2,7 @@
 
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
-var config = require('./config/gulp-config.js');
+var config = require('./gulp-tasks/_config.js');
 
 plugins.util.log('### GULP BOILERPLATE ###');
 
