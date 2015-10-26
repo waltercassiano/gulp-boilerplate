@@ -12,14 +12,3 @@ indent_size = 2
 
 [*.md]
 trim_trailing_whitespace = false
-
-# 2 space indentation
-#[*.js]
-#indent_style = space
-#indent_size = 2
-
-
-# 2 space indentation
-#[*.scss]
-#indent_style = space
-#indent_size = 2
