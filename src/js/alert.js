@@ -1,8 +1,9 @@
-var a = 3;
-var b = 5;
+'use strict';
 
-var showMessage = function (variable) {
-	$(variable).html();
+var a = 'Hello';
+var b = 'world';
+var showMessage = function(str) {
+  window.alert(str);
 };
 
-showMessage('.test');
+showMessage(a + b);

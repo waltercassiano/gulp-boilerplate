@@ -26,6 +26,8 @@
     "gulp-css-globbing": "^0.1.8",
     "gulp-eslint": "^1.0.0",
     "gulp-imagemin": "^2.3.0",
+    "gulp-jscs": "^3.0.1",
+    "gulp-jshint": "^1.11.2",
     "gulp-livereload": "^3.8.0",
     "gulp-load-plugins": "^0.10.0",
     "gulp-postcss": "^6.0.1",
@@ -38,7 +40,9 @@
     "gulp.spritesmith": "^4.0.0",
     "imagemin-mozjpeg": "^5.1.0",
     "imagemin-pngquant": "^4.2.0",
+    "jshint-stylish": "^2.0.1",
     "postcss-reporter": "^1.2.1",
+    "run-sequence": "^1.1.4",
     "stylelint": "^1.2.1"
   }
 }

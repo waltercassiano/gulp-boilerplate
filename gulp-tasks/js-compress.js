@@ -8,7 +8,7 @@ module.exports = function (gulp, $, config) {
       suffix: '.min'
     }))
     .pipe($.uglify())
-    .pipe($.sourcemaps.write())
+    .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest(config.paths.scripts.dest));
   };
 };
