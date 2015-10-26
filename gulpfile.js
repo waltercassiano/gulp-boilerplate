@@ -17,7 +17,7 @@ gulp.task('js:compress', getTask('js-compress'));
 gulp.task('js:watch', getTask('js-watch'));
 gulp.task('js:eslint', getTask('js-eslint'));
 gulp.task('sprite', getTask('sprite'));
-gulp.task('server', getTask('server'));
+gulp.task('server', ['default'], getTask('server'));
 gulp.task('stylelint', getTask('stylelint'));
 gulp.task('imagemin', getTask('imagemin'));
 gulp.task('imagemin-watch', getTask('imagemin-watch'));
