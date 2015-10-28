@@ -1,5 +1,5 @@
 'use strict';
-var postcss = require('gulp-postcss');
+
 var reporter = require("postcss-reporter");
 var stylelint = require("stylelint");
 
@@ -9,19 +9,19 @@ var stylelint = require("stylelint");
 //1 - turn the rule on as a warning (doesn't affect exit code)
 //2 - turn the rule on as an error (exit code will be 1)
 
-module.exports = function (gulp, $) {
+module.exports = function (gulp, $, config) {
   return function() {
-	 gulp.src("./test_files/dist/css/*.css")
-   .pipe(postcss([
-  	  stylelint({ // an example config that has four rules 
-  	    "rules": {
-  	      "color-no-invalid-hex": 2,
+    gulp.src(config.paths.styles.dest + "*.css")
+    .pipe($.postcss([
+      stylelint({
+        "rules": {
+          "color-no-invalid-hex": 2,
           "color-hex-case": [2, "lower"],
           "color-hex-length": [2, "short"],
           "block-no-empty": 2,
-  	      "declaration-colon-space-before": [2, "never"],
+          "declaration-colon-space-before": [2, "never"],
           "declaration-no-important": 2,
-  	      "indentation": [2, 2],
+          "indentation": [2, 2],
           "function-space-after": [2, "always"],
           "function-url-quotes": [2, "double"],
           "no-missing-eof-newline": 2,
@@ -31,11 +31,11 @@ module.exports = function (gulp, $) {
           "selector-no-universal": 1,
           "selector-pseudo-element-colon-notation": [2, "single"],
           "string-quotes": [2, "double"]
-  	    }
-  	  }),
-  	  reporter({
-  	    clearMessages: true,
-  	  })
-  	]));
+        }
+      }),
+      reporter({
+        clearMessages: true,
+      })
+    ]));
   };
 };

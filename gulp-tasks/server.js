@@ -3,7 +3,7 @@
 var browserSync = require('browser-sync').create();
 module.exports = function (gulp, $, config) {
 
-	return function() {
+  return function() {
     browserSync.init({
       proxy: 'yourlocal.dev',
       // baseDir: config.basePaths.dest
