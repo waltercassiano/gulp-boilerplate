@@ -18,6 +18,8 @@ We have some advice if you want to contribute with us. If you are in doubt about
 * [gulp-autoprefixer](https://github.com/sindresorhus/gulp-autoprefixer)
 * [gulp-css-globbing](https://github.com/jsahlen/gulp-css-globbing)
 * [gulp-eslint](https://github.com/adametry/gulp-eslint)
+* [gulp-jshint](https://github.com/spalger/gulp-jshint)
+* [gulp-jscs](https://github.com/jscs-dev/gulp-jscs)
 * [gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin)
 * [gulp-livereload](https://github.com/vohof/gulp-livereload)
 * [gulp-load-plugins](https://github.com/jackfranklin/gulp-load-plugins)
