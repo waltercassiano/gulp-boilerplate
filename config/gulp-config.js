@@ -8,8 +8,8 @@ module.exports = {
   },
   paths: {
     images: {
-      src: './test_files/src/images/',
-      dest: './test_files/dist/images/'
+      src: './test_files/src/img/',
+      dest: './test_files/dist/img/'
     },
     scripts: {
       fileName: 'main.js',
@@ -22,8 +22,8 @@ module.exports = {
       abstractions: './test_files/src/sass/abstractions/'
     },
     sprite: {
-      src: './test_files/src/images/sprite/',
-      src2x: './test_files/dist/images/sprite2x/'
+      src: './test_files/src/img/sprite/',
+      src2x: './test_files/dist/img/sprite2x/'
     },
   },
   spriteConfig: {
@@ -31,5 +31,4 @@ module.exports = {
     retinaImgName: 'sprite-2x.png',
     cssName: '_sprite.scss',
   }
-
 };
