@@ -1,7 +1,7 @@
 # Gulp Boilerplate ![Version](https://img.shields.io/badge/Version-1.0.4-green.svg)
 [![Build Status](https://travis-ci.org/ciandt-dev/gulp-boilerplate.svg)](https://travis-ci.org/ciandt-dev/gulp-boilerplate)
-[![Dependency Status](https://david-dm.org/ciandt-dev/gulp-boilerplate.svg)](https://david-dm.org/ciandt-dev/gulp-boilerplate.svg)
-[![devDependency Status](https://david-dm.org/ciandt-dev/gulp-boilerplate/dev-status.svg)](https://david-dm.org/ciandt-dev/gulp-boilerplate/dev-status.svg)
+[![Dependency Status](https://david-dm.org/ciandt-dev/gulp-boilerplate.svg)](https://david-dm.org/ciandt-dev/gulp-boilerplate/#info=dependencies&view=table)
+[![devDependency Status](https://david-dm.org/ciandt-dev/gulp-boilerplate/dev-status.svg)](https://david-dm.org/ciandt-dev/gulp-boilerplate/#info=devDependencies&view=table)
 > A simple way to start your project using Gulp.
 
 ## Requires
