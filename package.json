@@ -21,7 +21,7 @@
     "breakpoint-sass": "^2.6.1",
     "browser-sync": "^2.9.10",
     "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^2.3.1",
+    "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
     "gulp-css-globbing": "^0.1.8",
     "gulp-eslint": "^1.0.0",
@@ -29,7 +29,7 @@
     "gulp-jscs": "^3.0.1",
     "gulp-jshint": "^1.11.2",
     "gulp-livereload": "^3.8.0",
-    "gulp-load-plugins": "^0.10.0",
+    "gulp-load-plugins": "^1.1.0",
     "gulp-postcss": "^6.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4",
@@ -43,6 +43,6 @@
     "jshint-stylish": "^2.0.1",
     "postcss-reporter": "^1.2.1",
     "run-sequence": "^1.1.4",
-    "stylelint": "^1.2.1"
+    "stylelint": "^2.1.0"
   }
 }
