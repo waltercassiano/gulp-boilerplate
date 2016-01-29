@@ -4,12 +4,23 @@ var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 var config = require('./gulp-tasks/_config.js');
 var runSequence = require('run-sequence');
+var checkversion = require('./mymodules/check_version.js');
 
 plugins.util.log('### GULP BOILERPLATE ###');
 
 function getTask(task) {
   return require('./gulp-tasks/' + task)(gulp, plugins, config);
 }
+
+gulp.task('checkversion', function() {
+  var options = {
+    npm: '3.3.3',
+    node: '3.3.3'
+  }
+
+  checkversion.init(options);
+
+});
 
 gulp.task('sass:production', getTask('sass-production'));
 gulp.task('sass:dev', getTask('sass-dev'));
@@ -32,7 +43,8 @@ gulp.task('compileJS', function(cbFunc) {
               cbFunc);
 });
 
-gulp.task('default', [// Compile
+gulp.task('default', ['checkversion',
+                      // Compile
                       'sass:dev',
                       'sprite',
                       'compileJS',
