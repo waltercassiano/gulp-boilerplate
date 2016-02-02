@@ -14,55 +14,54 @@ var localEnv = {
   npm : process.env.npm_config_user_agent.match(/npm[//a-z_0-9_.]+/g) || undefined,
 };
 
-
-var checkversion = function() {
-	this.engines,
-  this.localEnv,
-	this.init = function(engines,localEnv) {
-
-		var scope = this;
-		scope.engines = engines || undefined;
-    scope.localEnv = localEnv || undefined;
-
-    //Exit if not get version from system or package json
-    if( !scope.engines || !scope.localEnv )
-      process.exit(8);
-
-    //Remove v4.*.*
-    scope.callBack('node', scope.localEnv.node.toString() );
-    scope.callBack('npm', scope.localEnv.npm.toString() );
-    //test success
-    process.exit(0);
-
-	},
-	this.callBack = function(elementVersion, version) {
-		var scope = this;
+var check_version = (function(engines, localEnv, undefined) {
+  var _engines;
+  var _localEnv;
+	var callBack = function(elementVersion, version) {
 		var npm;
 		var node;
 
 		switch (elementVersion) {
 			case 'node': {
 				node = version.replace(/([^0-9.]|\r\n|\n|\r)/gm,"");
-				console.log('- Current Version node: ' + node + ' => Version recomended ' + ((scope.engines[elementVersion]) ? scope.engines[elementVersion] : '' ));
-				this.testVersion(elementVersion, node);
+				console.log('- Current Version node: ' + node + ' => Version recomended ' + ((_engines[elementVersion]) ? _engines[elementVersion] : '' ));
+				testVersion(elementVersion, node);
 				break;
 			}
 			case 'npm' : {
 				npm = version.replace(/([^0-9.]|\r\n|\n|\r)/gm,"");
-				console.log('- Current Version npm: ' + npm + ' => Version recomended ' + ((scope.engines[elementVersion]) ?  scope.engines[elementVersion] : '' ));
-				this.testVersion(elementVersion, npm);
+				console.log('- Current Version npm: ' + npm + ' => Version recomended ' + ((_engines[elementVersion]) ?  _engines[elementVersion] : '' ));
+				testVersion(elementVersion, npm);
 				break;
 			}
 			default: process.exit(0);
 		}
-	},
-	this.testVersion = function(elementVersion,version) {
-		var scope = this;
-		if (version < scope.engines[elementVersion].replace(/([^0-9.]|\r\n|\n|\r)/gm,"")) {
+	};
+
+	var testVersion = function(elementVersion,version) {
+		if (version < _engines[elementVersion].replace(/([^0-9.]|\r\n|\n|\r)/gm,"")) {
 			process.exit(1);
 		}
-	}
-}
+	};
+
+  return {
+    init: function() {
+  		_engines = engines || undefined;
+      _localEnv = localEnv || undefined;
+
+      //Exit if not get version from system or package json
+      if( !_engines || !_localEnv )
+        process.exit(8);
+
+      //Remove v4.*.*
+      callBack('node', _localEnv.node.toString() );
+      callBack('npm', _localEnv.npm.toString() );
+
+      //test success
+      process.exit(0);
+  	},
+  };
+})(engines, localEnv, undefined);
 
 process.on('exit', function(code) {
   switch (code) {
@@ -71,5 +70,4 @@ process.on('exit', function(code) {
     default: return;
   }
 });
-
-module.exports = new checkversion().init(engines,localEnv);
+check_version.init();
