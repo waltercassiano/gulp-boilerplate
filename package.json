@@ -16,6 +16,7 @@
   "homepage": "https://github.com/ciandt-dev/gulp-boilerplate",
   "license": "MIT",
   "scripts": {
+    "test" : "node ./mymodules/check_version.js",
     "sass:dev": "./node_modules/.bin/gulp",
     "sass:prod": "./node_modules/.bin/gulp sass:prod"
   },
