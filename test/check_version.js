@@ -1,8 +1,4 @@
 'use strict';
-var childProcess = require('child_process');
-var util = require('util');
-var cp = require('child_process');
-
 
 var engines = {
     node : process.env.npm_package_engines_node || undefined,
@@ -70,4 +66,5 @@ process.on('exit', function(code) {
     default: return;
   }
 });
+
 check_version.init();
