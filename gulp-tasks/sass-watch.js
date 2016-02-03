@@ -2,7 +2,9 @@
 
 module.exports = function (gulp, $, config) {
   return function() {
-    gulp.watch(config.paths.styles.src + '*.scss', ['sass:dev']);
+    gulp.watch(config.paths.styles.src + '*.scss', ['sass:dev'],'' , function(callBack) {
+      console.log(callBack);
+    });
 
     // Create LiveReload server
     $.livereload.listen();
