@@ -48,5 +48,8 @@
     "postcss-reporter": "^1.2.1",
     "run-sequence": "^1.1.4",
     "stylelint": "^2.1.0"
+  },
+  "dependencies": {
+    "postcss-scss": "^0.1.6"
   }
 }
