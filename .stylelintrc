@@ -10,6 +10,7 @@
       }
     ],
     "declaration-no-important" : true,
-    "media-query-parentheses-space-inside" : "always"
+    "media-query-parentheses-space-inside" : "always",
+    "rule-properties-order" : "alphabetical"
   },
 }
