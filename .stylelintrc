@@ -5,9 +5,11 @@
   "extends": "stylelint-config-standard",
   "rules": {
     "statement-max-nesting-depth": [
-      2,{ 
-        countAtRules: false        
+      2,{
+        countAtRules: false
       }
     ],
+    "declaration-no-important" : true,
+    "media-query-parentheses-space-inside" : "always"
   },
 }
